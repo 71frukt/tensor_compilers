@@ -270,7 +270,6 @@ int function1(int* a, int n) {
     br f0, loop2_end, loop2_body;
 
   loop2_body:
-
     addr0 = a + j1;
     val0 = *addr0;
     tmp0 = 30 * val0;
@@ -305,10 +304,62 @@ int function1(int* a, int n) {
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.80\linewidth]{CFG_SSAv2.drawio.png}
-    \caption{CFG with SSA}
-    \label{fig:placeholder}
+    \includegraphics[width=0.80\linewidth]{CFG_SSA_refactored.png}
+    \caption{CFG with SSA (refactored)}
+    \label{fig:CFG_SSAv2}
 \end{figure}
+
+\newpage
+
+\paragraph{SSA IR - refactored} ~\\
+\begin{lstlisting}
+int function1(int* a, int n) {
+  loop1_preheader:
+    result0 = 0;
+    i0 = 0;
+    loop1_neg_cnd = (i0 >= n);
+    br loop1_neg_cnd, exit, loop1_header;
+
+  loop1_header:
+    result1 = phi(result0, result5);
+    i1 = phi(i0, i2);
+    j0 = 0;
+    loop2_cnd0 = (j0 < n);
+    br loop2_cnd0, loop2_header, loop1_latch;
+
+  loop2_header:
+    result2 = phi(result1, result4);
+    j1 = phi(j0, j2);
+    e0 = (j1 % 2);
+    f0 = (e0 == 0);
+    br f0, loop2_latch, loop2_body;
+
+  loop2_body:
+    addr0 = a + j1;
+    val0 = *addr0;
+    tmp0 = 30 * val0;
+    tmp1 = tmp0 - i1;
+    tmp2 = tmp1 - 2;
+    result3 = result2 + tmp2;
+    br loop2_latch;
+
+  loop2_latch:
+    result4 = phi(result2, result3);
+    j2 = j1 + 1;
+    loop2_cnd1 = (j2 < n);
+    br loop2_cnd1, loop2_header, loop1_latch;
+
+  loop1_latch:
+    result5 = phi(result1, result4);
+    i2 = i1 + 1;
+    loop1_cnd0 = (i2 < n);
+    br loop1_cnd0, loop1_header, exit;
+
+  exit:
+    result6 = phi(result0, result5);
+    return result6;
+}
+\end{lstlisting}
 
 \subsection{Loop Strength Resuction}
 Заметим, что в внутреннем цикле индуктивная переменная $\texttt{j} = <0, +, 1>$, при этом внутри стоит проверка на $\texttt{j} \% 2 == 0$. В таком случае можем заменить индуктивность на $\texttt{j} = <1, +, 2>$, а лишнюю проверку выкинуть. 
@@ -317,10 +368,55 @@ CFG цикл примет вид
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.80\linewidth]{CFG_SSAv2opt1.png}
-    \caption{CFG with SSA}
+    \includegraphics[width=0.80\linewidth]{CFG_SSA_LSR.png}
+    \caption{CFG with SSA (LSR)}
     \label{fig:placeholder}
 \end{figure}
+
+\paragraph{SSA IR - LSR} ~\\
+\begin{lstlisting}
+int function1(int* a, int n) {
+  loop1_preheader:
+    result0 = 0;
+    i0 = 0;
+    loop1_neg_cnd = (i0 >= n);
+    br loop1_neg_cnd, exit, loop1_header;
+
+  loop1_header:
+    result1 = phi(result0, result5);
+    i1 = phi(i0, i2);
+    j0 = 1;
+    loop2_cnd0 = (j0 < n);
+    br loop2_cnd0, loop2_header, loop1_latch;
+
+  loop2_header:
+    result2 = phi(result1, result4);
+    j1 = phi(j0, j2);
+    addr0 = a + j1;
+    val0 = *addr0;
+    tmp0 = 30 * val0;
+    tmp1 = tmp0 - i1;
+    tmp2 = tmp1 - 2;
+    result3 = result2 + tmp2;
+    br loop2_latch;
+
+  loop2_latch:
+    result4 = result3;
+    j2 = j1 + 2;
+    loop2_cnd1 = (j2 < n);
+    br loop2_cnd1, loop2_header, loop1_latch;
+
+  loop1_latch:
+    result5 = phi(result1, result4);
+    i2 = i1 + 1;
+    loop1_cnd0 = (i2 < n);
+    br loop1_cnd0, loop1_header, exit;
+
+  exit:
+    result6 = phi(result0, result5);
+    return result6;
+}
+\end{lstlisting}
 
 
 \end{document}

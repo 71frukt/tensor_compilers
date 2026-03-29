@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.3.29)  29 MAR 2026 21:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.3.29)  29 MAR 2026 19:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/frukt71/Github/tensor_compilers/IR/main.tex
-(/home/frukt71/Github/tensor_compilers/IR/main.tex
+**/home/frukt71/Github/tensor_compilers/CODEGEN/preamble.tex
+(/home/frukt71/Github/tensor_compilers/CODEGEN/preamble.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21> (./preamble.tex (/usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
+L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/extsizes/size14.clo
 File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
@@ -547,10 +547,10 @@ Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
-runsystem(uname -s > "main.w18")...executed.
+runsystem(uname -s > "preamble.w18")...executed.
 
- (./main.w18)
-runsystem(rm -- "main.w18")...executed.
+ (./preamble.w18)
+runsystem(rm -- "preamble.w18")...executed.
 
 )
 \c@svg@param@lastpage=\count297
@@ -621,252 +621,19 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-)) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count307
-\l__pdf_internal_box=\box59
-) (build/main.aux
-
-LaTeX Warning: Label `fig:svg_example' multiply defined.
-
-
-LaTeX Warning: Label `fig:placeholder' multiply defined.
-
-
-LaTeX Warning: Label `fig:placeholder' multiply defined.
-
-)
-\openout1 = `main.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Info: Redefining \th on input line 10.
-
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(71.13188pt, 483.69687pt, 42.67912pt)
-* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=483.69687pt
-* \textheight=731.23584pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-54.36449pt
-* \headheight=14.0pt
-* \headsep=25.0pt
-* \topskip=14.0pt
-* \footskip=30.0pt
-* \marginparwidth=15.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=12.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-Package hyperref Info: Link coloring OFF on input line 10.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
- (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-)
-\c@section@level=\count308
-)
-LaTeX Info: Redefining \ref on input line 10.
-LaTeX Info: Redefining \pageref on input line 10.
-LaTeX Info: Redefining \nameref on input line 10.
- (build/main.out) (build/main.out)
-\@outlinefile=\write4
-\openout4 = `main.out'.
-
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count309
-\scratchdimen=\dimen181
-\scratchbox=\box60
-\nofMPsegments=\count310
-\nofMParguments=\count311
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count312
-\MPscratchDim=\dimen182
-\MPnumerator=\count313
-\makeMPintoPDFobject=\count314
-\everyMPtoPDFconversion=\toks37
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \microtypecontext on input line 10.
-Package microtype Info: Applying patch `item' on input line 10.
-Package microtype Info: Applying patch `toc' on input line 10.
-Package microtype Info: Applying patch `eqnum' on input line 10.
+! Emergency stop.
+<*> ...ithub/tensor_compilers/CODEGEN/preamble.tex
+                                                  
+*** (job aborted, no legal \end found)
 
-
-Package microtype Warning: Unable to apply patch `footnote' on input line 10.
-
-Package microtype Info: Generating PDF output.
-Package microtype Info: Character protrusion enabled (level 2).
-Package microtype Info: Using default protrusion set `alltext'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 10.
-Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of interword spacing.
-Package microtype Info: No adjustment of character kerning.
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
-)
-\c@lstlisting=\count315
-LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 14.
- (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T2A).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
-<img//CFG.png, id=161, 902.37125pt x 1257.69875pt>
-File: img//CFG.png Graphic file (type png)
-<use img//CFG.png>
-Package pdftex.def Info: img//CFG.png  used on input line 126.
-(pdftex.def)             Requested size: 435.32422pt x 606.7591pt.
-<./svg-inkscape/DomG_svg-raw.pdf, id=163, 270.25969pt x 310.91156pt>
-File: ./svg-inkscape/DomG_svg-raw.pdf Graphic file (type pdf)
-<use ./svg-inkscape/DomG_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/DomG_svg-raw.pdf  used on input line 134.
-(pdftex.def)             Requested size: 270.25902pt x 310.91078pt.
- [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.139 \newpage
-               <./svg-inkscape/DomG_svg-raw.pdf>] [6pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.139 \newpage
-               <./img//CFG.png>]
-<./svg-inkscape/DF_G_svg-raw.pdf, id=190, 261.22594pt x 324.8386pt>
-File: ./svg-inkscape/DF_G_svg-raw.pdf Graphic file (type pdf)
-<use ./svg-inkscape/DF_G_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/DF_G_svg-raw.pdf  used on input line 143.
-(pdftex.def)             Requested size: 261.22528pt x 324.83778pt.
-<img//CFD_SSA.png, id=191, 902.37125pt x 1258.7025pt>
-File: img//CFD_SSA.png Graphic file (type png)
-<use img//CFD_SSA.png>
-Package pdftex.def Info: img//CFD_SSA.png  used on input line 150.
-(pdftex.def)             Requested size: 362.77264pt x 506.0265pt.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.154 
-       <./svg-inkscape/DF_G_svg-raw.pdf>] [8pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.155 \newpage
-               <./img//CFD_SSA.png>] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
-
- []
-
-[10] [11]
-<img//CFG_SSA_refactored.png, id=351, 902.37125pt x 1257.69875pt>
-File: img//CFG_SSA_refactored.png Graphic file (type png)
-<use img//CFG_SSA_refactored.png>
-Package pdftex.def Info: img//CFG_SSA_refactored.png  used on input line 307.
-(pdftex.def)             Requested size: 386.95897pt x 539.34142pt.
- [12pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.312 \newpage
-               <./img//CFG_SSA_refactored.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
-
- []
-
-[13]
-<img//CFG_SSA_LSR.png, id=407, 902.37125pt x 1257.69875pt>
-File: img//CFG_SSA_LSR.png Graphic file (type png)
-<use img//CFG_SSA_LSR.png>
-Package pdftex.def Info: img//CFG_SSA_LSR.png  used on input line 371.
-(pdftex.def)             Requested size: 386.95897pt x 539.34142pt.
- [14]
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
-
- []
-
-[15pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.385   loop1_header:
-                      <./img//CFG_SSA_LSR.png>] [16] (build/main.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CCAFBF42B53039A6A61E53DEE0E57119;1713.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 18907 strings out of 479721
- 306410 string characters out of 5887697
- 984039 words of memory out of 5000000
- 36132 multiletter control sequences out of 15000+600000
- 487429 words of font info for 100 fonts, out of 8000000 for 9000
+ 16619 strings out of 479721
+ 271029 string characters out of 5887697
+ 819834 words of memory out of 5000000
+ 34345 multiletter control sequences out of 15000+600000
+ 470363 words of font info for 30 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 99i,7n,95p,1042b,1873s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on build/main.pdf (16 pages, 473031 bytes).
-PDF statistics:
- 598 PDF objects out of 1000 (max. 8388607)
- 532 compressed objects within 6 object streams
- 336 named destinations out of 1000 (max. 500000)
- 34923 words of extra memory for PDF output out of 35830 (max. 10000000)
-
+ 94i,0n,92p,364b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
